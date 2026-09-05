@@ -1,0 +1,44 @@
+{
+  "brand": { "name": "Python-MG" },
+  "hero": {
+    "title": { "pt": "Seja bem-vindo ao Python-MG!", "en": "Welcome to Python-MG!" },
+    "text": { "pt": "Grupo de usuários da linguagem Python em Minas Gerais.", "en": "Python user group in Minas Gerais, Brazil." }
+  },
+  "about": {
+    "pt": "A Python-MG é uma comunidade de usuários — profissionais e amadores — da linguagem Python. Prezamos pela troca de conhecimento, respeito mútuo e diversidade, tanto de opinião quanto de tecnologias.",
+    "en": "Python-MG is a community of Python users — professionals and hobbyists — built on knowledge sharing, mutual respect, and diversity of opinions and technologies."
+  },
+  "home": {
+    "heading": { "pt": "O que fazemos", "en": "What we do" },
+    "cards": [
+      { "route": "comunidade", "title": { "pt": "Comunidade", "en": "Community" }, "text": { "pt": "Conversamos na lista de emails e no Telegram, e promovemos almoços, coding dojos e palestras.", "en": "We connect through the mailing list and Telegram, and run lunches, coding dojos and talks." }, "cta": { "pt": "Saiba mais", "en": "Learn more" } },
+      { "route": "membros", "title": { "pt": "Membros", "en": "Members" }, "text": { "pt": "Colaboradores mantêm a comunicação ativa e ajudam a organizar e divulgar os encontros.", "en": "Contributors keep communication active and help organise and share our events." }, "cta": { "pt": "Conheça", "en": "Meet them" } },
+      { "route": "projetos", "title": { "pt": "Projetos", "en": "Projects" }, "text": { "pt": "Iniciativas colaborativas para levar conhecimento e Python a mais pessoas.", "en": "Collaborative initiatives that bring Python and knowledge to more people." }, "cta": { "pt": "Ver projetos", "en": "View projects" } }
+    ]
+  },
+  "community": [
+    { "title": { "pt": "Mídias sociais", "en": "Social media" }, "text": { "pt": "Acompanhe encontros, novidades e publicações da comunidade.", "en": "Follow meetups, news and community posts." }, "links": [{ "text": "Telegram", "href": "https://telegram.me/pythonmg" }, { "text": "Twitter", "href": "https://twitter.com/PythonMG" }, { "text": "Facebook", "href": "https://facebook.com/uaipython" }] },
+    { "title": { "pt": "Meetup", "en": "Meetup" }, "text": { "pt": "Nos encontramos regularmente para trocar conhecimento e experiências.", "en": "We meet regularly to share knowledge and experience." }, "links": [{ "text": "Meetup", "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/" }] },
+    { "title": { "pt": "Lista de emails", "en": "Mailing list" }, "text": { "pt": "A lista oficial no Google Groups continua aberta para toda a comunidade.", "en": "The official Google Groups list is open to the entire community." }, "links": [{ "text": "Google Groups", "href": "https://groups.google.com/forum/#!forum/python-mg" }] }
+  ],
+  "projects": [
+    { "title": "Traduções do Django docs", "text": { "pt": "Tradução colaborativa da documentação oficial do Django para o português.", "en": "Collaborative translation of the official Django documentation into Portuguese." } },
+    { "title": "Python on Campus", "text": { "pt": "Palestras e oficinas que levam Python para universidades de Minas Gerais.", "en": "Talks and workshops that bring Python to universities in Minas Gerais." } }
+  ],
+  "conduct": {
+    "title": { "pt": "Código de conduta", "en": "Code of conduct" },
+    "intro": { "pt": "Prezamos por um espaço acolhedor, respeitoso e diverso em todos os nossos encontros e canais.", "en": "We aim for a welcoming, respectful and diverse space in every meetup and channel." },
+    "items": [
+      { "pt": "Respeite as pessoas, presencialmente e nos canais online.", "en": "Respect people, in person and online." },
+      { "pt": "Não toleramos assédio, discriminação ou linguagem ofensiva.", "en": "Harassment, discrimination and offensive language are not tolerated." },
+      { "pt": "Perguntas de iniciantes são bem-vindas em qualquer encontro.", "en": "Beginner questions are welcome at every meetup." },
+      { "pt": "Relate problemas à organização pelo Telegram ou pela lista de emails.", "en": "Report problems to organisers through Telegram or the mailing list." }
+    ]
+  },
+  "social": [
+    { "text": "GitHub", "href": "https://github.com/pythonmg" },
+    { "text": "Telegram", "href": "https://telegram.me/pythonmg" },
+    { "text": "Mailing list", "href": "https://groups.google.com/forum/#!forum/python-mg" }
+  ],
+  "footer": { "credit": { "pt": "Feito com Python, JSON e HTML.", "en": "Made with Python, JSON and HTML." }, "repo": "https://github.com/pythonmg/pythonmg.github.io" }
+}

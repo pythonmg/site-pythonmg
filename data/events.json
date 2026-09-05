@@ -1,0 +1,26 @@
+[
+  {
+    "title": { "pt": "Coding Dojo Python-MG", "en": "Python-MG Coding Dojo" },
+    "date": "2026-09-24",
+    "time": "19:00",
+    "place": { "pt": "A confirmar — Belo Horizonte", "en": "TBC — Belo Horizonte" },
+    "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/",
+    "kind": "dojo"
+  },
+  {
+    "title": { "pt": "Almoço Pythônico", "en": "Pythonic Lunch" },
+    "date": "2026-10-10",
+    "time": "12:30",
+    "place": { "pt": "Savassi, Belo Horizonte", "en": "Savassi, Belo Horizonte" },
+    "href": "https://telegram.me/pythonmg",
+    "kind": "almoço"
+  },
+  {
+    "title": { "pt": "Encontro Python-MG: palestras", "en": "Python-MG Meetup: talks" },
+    "date": "2026-08-20",
+    "time": "19:00",
+    "place": { "pt": "Belo Horizonte", "en": "Belo Horizonte" },
+    "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/",
+    "kind": "palestras"
+  }
+]

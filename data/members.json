@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Alessandra Cioletti",
+    "linkedin": "https://www.linkedin.com/in/alessandracioletti/"
+  },
+  {
+    "name": "Cássio Botaro",
+    "github": "cassiobotaro",
+    "twitter": "@cassiobotaro",
+    "email": "cassiobotaro@gmail.com",
+    "site": { "nome": "Import None", "href": "https://cassiobotaro.github.io" }
+  },
+  {
+    "name": "Débora Thomaz",
+    "linkedin": "https://www.linkedin.com/in/dmthomaz/"
+  },
+  {
+    "name": "Lauro Lyra",
+    "linkedin": "https://www.linkedin.com/in/laurolyra/"
+  },
+  {
+    "name": "Pedro Resende",
+    "linkedin": "https://www.linkedin.com/in/pedro-resende-dev/"
+  },
+  {
+    "name": "Vitor Buxbaum",
+    "github": "vbuxbaum",
+    "instagram": "bux.baum",
+    "linkedin": "vbuxbaum"
+  }
+]
