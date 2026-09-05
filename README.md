@@ -103,3 +103,16 @@ atualiza — o PR `automation/meetup-events` somente quando houver diferença.
 Antes do primeiro uso, habilite em **Settings → Actions → General → Workflow
 permissions** a opção de leitura e escrita e permita que o GitHub Actions crie
 pull requests. Não há segredo ou credencial do Meetup no workflow.
+
+## Publicação no GitHub Pages
+
+O workflow `.github/workflows/deploy-pages.yml` publica `index.html`, `assets/`
+e `data/` quando mudanças desses arquivos chegam à `main`; ele também pode ser
+executado manualmente. O JSON aprovado no PR de eventos, portanto, é publicado
+no próximo merge sem exigir uma cópia local do repositório.
+
+Antes da primeira publicação, configure em **Settings → Pages → Build and
+deployment** a origem como **GitHub Actions**. Para este repositório, a URL
+padrão será `https://pythonmg.github.io/site-pythonmg/`. O domínio
+`pythonmg.github.io` exige uma configuração de domínio personalizado ou um
+repositório de usuário/organização com esse nome.
