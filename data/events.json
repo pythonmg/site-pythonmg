@@ -1,26 +1,152 @@
 [
   {
-    "title": { "pt": "Coding Dojo Python-MG", "en": "Python-MG Coding Dojo" },
-    "date": "2026-09-24",
+    "title": {
+      "pt": "PyBHar - 07/03/2024",
+      "en": "PyBHar - 07/03/2024"
+    },
+    "date": "2024-03-07",
     "time": "19:00",
-    "place": { "pt": "A confirmar — Belo Horizonte", "en": "TBC — Belo Horizonte" },
-    "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/",
-    "kind": "dojo"
+    "place": {
+      "pt": "O Segredo, Belo Horizonte",
+      "en": "O Segredo, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/299538407/",
+    "kind": "physical",
+    "source": "meetup"
   },
   {
-    "title": { "pt": "Almoço Pythônico", "en": "Pythonic Lunch" },
-    "date": "2026-10-10",
-    "time": "12:30",
-    "place": { "pt": "Savassi, Belo Horizonte", "en": "Savassi, Belo Horizonte" },
-    "href": "https://telegram.me/pythonmg",
-    "kind": "almoço"
+    "title": {
+      "pt": "Meetup Python MG - 27/03/2024",
+      "en": "Meetup Python MG - 27/03/2024"
+    },
+    "date": "2024-03-27",
+    "time": "19:00",
+    "place": {
+      "pt": "CEFET-MG - Campus Nova Gameleira, Belo Horizonte",
+      "en": "CEFET-MG - Campus Nova Gameleira, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/299753134/",
+    "kind": "physical",
+    "source": "meetup"
   },
   {
-    "title": { "pt": "Encontro Python-MG: palestras", "en": "Python-MG Meetup: talks" },
-    "date": "2026-08-20",
+    "title": {
+      "pt": "PyBHar - 11/04/2024",
+      "en": "PyBHar - 11/04/2024"
+    },
+    "date": "2024-04-11",
     "time": "19:00",
-    "place": { "pt": "Belo Horizonte", "en": "Belo Horizonte" },
-    "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/",
-    "kind": "palestras"
+    "place": {
+      "pt": "O Segredo, Belo Horizonte",
+      "en": "O Segredo, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/300326631/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "Meetup Python MG - 12/09/2024",
+      "en": "Meetup Python MG - 12/09/2024"
+    },
+    "date": "2024-09-12",
+    "time": "19:00",
+    "place": {
+      "pt": "Avenue Code, Belo Horizonte",
+      "en": "Avenue Code, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/303246080/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "PyBHar - 19/09/2024",
+      "en": "PyBHar - 19/09/2024"
+    },
+    "date": "2024-09-19",
+    "time": "19:00",
+    "place": {
+      "pt": "O Segredo, Belo Horizonte",
+      "en": "O Segredo, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/303486424/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "Tutoriais GRATUITOS Python Sudeste 2025",
+      "en": "Tutoriais GRATUITOS Python Sudeste 2025"
+    },
+    "date": "2025-05-30",
+    "time": "14:00",
+    "place": {
+      "pt": "PUC Minas Praça da Liberdade, Belo Horizonte",
+      "en": "PUC Minas Praça da Liberdade, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/307934516/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "Palestras Python Sudeste 2025 em BH!",
+      "en": "Palestras Python Sudeste 2025 em BH!"
+    },
+    "date": "2025-05-31",
+    "time": "08:00",
+    "place": {
+      "pt": "PUC Minas Praça da Liberdade, Belo Horizonte",
+      "en": "PUC Minas Praça da Liberdade, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/307296314/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "PyBHar - Reaquecendo os motores",
+      "en": "PyBHar - Reaquecendo os motores"
+    },
+    "date": "2025-06-27",
+    "time": "20:00",
+    "place": {
+      "pt": "O Segredo, Belo Horizonte",
+      "en": "O Segredo, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/308631877/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "PyBHar - em ritmo de confra!",
+      "en": "PyBHar - em ritmo de confra!"
+    },
+    "date": "2025-11-20",
+    "time": "19:00",
+    "place": {
+      "pt": "Bar do Cláudio - o rei da omelete, Belo Horizonte",
+      "en": "Bar do Cláudio - o rei da omelete, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/312034173/",
+    "kind": "physical",
+    "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "PyBHar - pra agregar nesse mês compriiiiido",
+      "en": "PyBHar - pra agregar nesse mês compriiiiido"
+    },
+    "date": "2026-08-12",
+    "time": "19:00",
+    "place": {
+      "pt": "Xangô, Belo Horizonte",
+      "en": "Xangô, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/315969580/",
+    "kind": "physical",
+    "source": "meetup"
   }
 ]
