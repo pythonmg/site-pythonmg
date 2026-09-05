@@ -33,7 +33,7 @@ jobs:
           python-version: '3.13'
 
       - name: Export upcoming events
-        run: python scripts/sync_meetup_events.py --output data/events.json
+        run: python scripts/sync_meetup_events.py --include-past --output data/events.json
 
       - name: Create or update event-sync pull request
         uses: peter-evans/create-pull-request@v8
