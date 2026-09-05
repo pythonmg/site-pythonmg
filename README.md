@@ -71,3 +71,24 @@ fallback de avatar. Também é possível informar `"avatar"` com uma URL de imag
 que sempre tem prioridade. Os campos de rede social aceitam um usuário (com ou
 sem `@`) ou a URL completa do perfil. Para `mastodon`, use a URL completa ou o
 formato `@usuario@servidor`.
+
+## POC: importar eventos do Meetup
+
+Com autorização do Meetup, a POC em `scripts/sync_meetup_events.py` faz uma
+única requisição manual à página pública do grupo e exporta os eventos para o
+mesmo formato do site. Ela não usa credenciais, navegador automatizado ou
+agendamento.
+
+```sh
+# Inspeciona a agenda, sem alterar arquivos.
+python3 scripts/sync_meetup_events.py --dry-run
+
+# Grava uma cópia para revisão.
+python3 scripts/sync_meetup_events.py --output data/events.meetup.json
+
+# Depois de revisar, substitui a agenda publicada.
+python3 scripts/sync_meetup_events.py --output data/events.json
+```
+
+Por padrão, a POC exporta somente eventos a partir da data atual. Use
+`--include-past` apenas para uma exportação histórica pontual.
