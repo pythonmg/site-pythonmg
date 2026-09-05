@@ -18,7 +18,6 @@ arquivos estáticos, incluindo GitHub Pages.
 Os arquivos abaixo são copiados para o site sem transformação. Não é preciso
 editar HTML, CSS ou JavaScript para alterar as listas:
 
-- `data/events.json` — agenda de eventos;
 - `data/members.json` — pessoas colaboradoras;
 - `data/posts.json` — posts do blog (opcional);
 - `data/site.json` — textos institucionais, links, projetos e código
@@ -27,25 +26,8 @@ editar HTML, CSS ou JavaScript para alterar as listas:
 Depois de mudar um JSON, valide a sintaxe:
 
 ```sh
-python3 -m json.tool data/events.json >/dev/null
 python3 -m json.tool data/members.json >/dev/null
 ```
-
-### Evento
-
-```json
-{
-  "title": { "pt": "Nome do encontro", "en": "Event name" },
-  "date": "2026-10-10",
-  "time": "19:00",
-  "place": { "pt": "Belo Horizonte", "en": "Belo Horizonte" },
-  "href": "https://exemplo.org/evento",
-  "kind": "palestra"
-}
-```
-
-Use a data no formato `AAAA-MM-DD`. Eventos a partir de hoje aparecem em
-**Próximos**; os demais ficam em **Eventos anteriores**.
 
 ### Membro
 
@@ -72,33 +54,14 @@ que sempre tem prioridade. Os campos de rede social aceitam um usuário (com ou
 sem `@`) ou a URL completa do perfil. Para `mastodon`, use a URL completa ou o
 formato `@usuario@servidor`.
 
-## POC: importar eventos do Meetup
-
-Com autorização do Meetup, a POC em `scripts/sync_meetup_events.py` faz uma
-única requisição manual à página pública do grupo e exporta os eventos para o
-mesmo formato do site. Ela não usa credenciais, navegador automatizado ou
-agendamento.
-
-```sh
-# Inspeciona a agenda, sem alterar arquivos.
-python3 scripts/sync_meetup_events.py --dry-run
-
-# Grava uma cópia para revisão.
-python3 scripts/sync_meetup_events.py --output data/events.meetup.json
-
-# Depois de revisar, substitui a agenda publicada.
-python3 scripts/sync_meetup_events.py --output data/events.json
-```
-
-Por padrão, a POC exporta somente eventos a partir da data atual. Use
-`--include-past` apenas para uma exportação histórica pontual.
-
-### Sincronização no GitHub Actions
+## Eventos e GitHub Actions
 
 O workflow `.github/workflows/sync-meetup-events.yml` executa toda segunda-feira
 às 12:17 UTC e também pode ser disparado em **Actions → Sync Meetup events → Run
-workflow**. Ele atualiza `data/events.json` no ambiente de execução e abre — ou
-atualiza — o PR `automation/meetup-events` somente quando houver diferença.
+workflow**. O Meetup é a fonte de verdade: o workflow coleta a agenda, atualiza
+`data/events.json` no ambiente de execução e abre — ou atualiza — o PR
+`automation/meetup-events` somente quando houver diferença. Revise e faça merge
+desse PR para publicar os novos eventos.
 
 Antes do primeiro uso, habilite em **Settings → Actions → General → Workflow
 permissions** a opção de leitura e escrita e permita que o GitHub Actions crie
