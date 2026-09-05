@@ -27,12 +27,10 @@
   ],
   "conduct": {
     "title": { "pt": "Código de conduta", "en": "Code of conduct" },
-    "intro": { "pt": "Prezamos por um espaço acolhedor, respeitoso e diverso em todos os nossos encontros e canais.", "en": "We aim for a welcoming, respectful and diverse space in every meetup and channel." },
     "items": [
-      { "pt": "Respeite as pessoas, presencialmente e nos canais online.", "en": "Respect people, in person and online." },
-      { "pt": "Não toleramos assédio, discriminação ou linguagem ofensiva.", "en": "Harassment, discrimination and offensive language are not tolerated." },
-      { "pt": "Perguntas de iniciantes são bem-vindas em qualquer encontro.", "en": "Beginner questions are welcome at every meetup." },
-      { "pt": "Relate problemas à organização pelo Telegram ou pela lista de emails.", "en": "Report problems to organisers through Telegram or the mailing list." }
+      { "pt": "Não é tolerado nenhum tipo de assédio, discriminação inapropriada ou humilhação pública;", "en": "Harassment, inappropriate discrimination, and public humiliation are not tolerated;" },
+      { "pt": "Não é tolerado o descumprimento das leis brasileiras;", "en": "Violations of Brazilian law are not tolerated;" },
+      { "pt": "Toda pessoa presente nos eventos, independente do seu papel, está sujeita a estas regras;", "en": "Everyone present at events, regardless of their role, is subject to these rules;" }
     ]
   },
   "social": [

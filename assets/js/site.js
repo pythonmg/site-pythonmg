@@ -9,14 +9,14 @@
     pt: {
       about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos no Meetup ↗', seeMoreEvents: 'Ver mais no Meetup ↗',
       community: 'Comunidade', members: 'Membros', events: 'Eventos', projects: 'Projetos',
-      conduct: 'Código de conduta', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
+      conduct: 'Código de conduta', fullConduct: 'Ver Código de Conduta completo ↗', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
       eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.',
       noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum membro cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
     },
     en: {
       about: 'About', nextMeetups: 'Next meetups', seeEvents: 'View events on Meetup ↗', seeMoreEvents: 'View more on Meetup ↗',
       community: 'Community', members: 'Members', events: 'Events', projects: 'Projects',
-      conduct: 'Code of conduct', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
+      conduct: 'Code of conduct', fullConduct: 'View the full Code of Conduct ↗', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
       eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.',
       noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
     }
@@ -121,7 +121,6 @@
     byId('events-title').textContent = text('events');
     byId('projects-title').textContent = text('projects');
     byId('conduct-title').textContent = pick(site.conduct.title);
-    byId('conduct-intro').textContent = pick(site.conduct.intro);
     byId('footer-about').textContent = pick(site.about);
     byId('footer-credit').textContent = pick(site.footer.credit);
     byId('repository-link').href = safeHref(site.footer.repo);
