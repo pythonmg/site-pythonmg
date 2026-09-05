@@ -7,17 +7,17 @@
   };
   const COPY = {
     pt: {
-      about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos',
+      about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos no Meetup ↗', seeMoreEvents: 'Ver mais no Meetup ↗',
       community: 'Comunidade', members: 'Membros', events: 'Eventos', projects: 'Projetos',
       conduct: 'Código de conduta', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
-      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.', meetupAgenda: 'Ver agenda no Meetup ↗',
+      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.',
       noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum membro cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
     },
     en: {
-      about: 'About', nextMeetups: 'Next meetups', seeEvents: 'See events',
+      about: 'About', nextMeetups: 'Next meetups', seeEvents: 'View events on Meetup ↗', seeMoreEvents: 'View more on Meetup ↗',
       community: 'Community', members: 'Members', events: 'Events', projects: 'Projects',
       conduct: 'Code of conduct', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
-      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.', meetupAgenda: 'View the Meetup calendar ↗',
+      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.',
       noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
     }
   };
@@ -210,7 +210,7 @@
       item.append(date, details, element('span', { class: 'event-kind', text: event.kind || 'evento' }));
       futureContainer.append(item);
     });
-    past.forEach((event) => {
+    past.slice(0, 3).forEach((event) => {
       const item = external(event.href || '#eventos', '', 'past-event');
       item.append(element('time', { datetime: event.date, text: event.date }), element('span', { text: event.title }), element('small', { text: event.place }));
       pastContainer.append(item);
