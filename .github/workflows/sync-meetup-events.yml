@@ -1,0 +1,49 @@
+name: Sync Meetup events
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays at 12:17 UTC (09:17 in São Paulo outside daylight saving time).
+    - cron: '17 12 * * 1'
+
+# Required by peter-evans/create-pull-request to commit the generated JSON and
+# create or update its pull request.
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: meetup-events-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Fetch public Meetup events
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Export upcoming events
+        run: python scripts/sync_meetup_events.py --output data/events.json
+
+      - name: Create or update event-sync pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/meetup-events
+          delete-branch: true
+          commit-message: 'chore: sync Meetup events'
+          title: 'chore: sync Meetup events'
+          body: |
+            Atualização automática da agenda pública do grupo Python-MG no Meetup.
+
+            Revise as mudanças em `data/events.json` antes de fazer o merge.

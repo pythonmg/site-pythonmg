@@ -92,3 +92,14 @@ python3 scripts/sync_meetup_events.py --output data/events.json
 
 Por padrão, a POC exporta somente eventos a partir da data atual. Use
 `--include-past` apenas para uma exportação histórica pontual.
+
+### Sincronização no GitHub Actions
+
+O workflow `.github/workflows/sync-meetup-events.yml` executa toda segunda-feira
+às 12:17 UTC e também pode ser disparado em **Actions → Sync Meetup events → Run
+workflow**. Ele atualiza `data/events.json` no ambiente de execução e abre — ou
+atualiza — o PR `automation/meetup-events` somente quando houver diferença.
+
+Antes do primeiro uso, habilite em **Settings → Actions → General → Workflow
+permissions** a opção de leitura e escrita e permita que o GitHub Actions crie
+pull requests. Não há segredo ou credencial do Meetup no workflow.
