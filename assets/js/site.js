@@ -41,12 +41,32 @@
   const pick = (value) => value && typeof value === 'object'
     ? (value[lang] || value.pt || value.en || '') : (value || '');
   const text = (key) => COPY[lang][key];
+  const externalIcon = (href) => {
+    const value = String(href || '').toLowerCase();
+    if (value.startsWith('mailto:')) return 'bi-envelope';
+    if (value.includes('meetup.com')) return 'bi-calendar-event';
+    if (value.includes('github.com')) return 'bi-github';
+    if (value.includes('instagram.com')) return 'bi-instagram';
+    if (value.includes('youtube.com') || value.includes('youtu.be')) return 'bi-youtube';
+    if (value.includes('telegram.me') || value.includes('t.me/')) return 'bi-telegram';
+    if (value.includes('linkedin.com')) return 'bi-linkedin';
+    if (value.includes('twitter.com') || value.includes('x.com')) return 'bi-twitter-x';
+    if (value.includes('facebook.com')) return 'bi-facebook';
+    if (value.includes('bsky.app')) return 'bi-cloud';
+    if (value.includes('threads.net')) return 'bi-threads';
+    if (value.includes('mastodon')) return 'bi-mastodon';
+    return 'bi-box-arrow-up-right';
+  };
   const external = (href, label, className) => {
-    const link = element('a', { href: safeHref(href), text: label, class: className });
+    const link = element('a', { href: safeHref(href), class: className });
     if (/^https?:/i.test(link.href)) {
       link.target = '_blank';
       link.rel = 'noreferrer';
     }
+    if (label) link.append(
+      element('i', { class: `bi ${externalIcon(href)} external-link-icon`, 'aria-hidden': 'true' }),
+      document.createTextNode(label)
+    );
     return link;
   };
   const safeHref = (href) => /^(https?:|mailto:|#)/i.test(href || '') ? href : '#';

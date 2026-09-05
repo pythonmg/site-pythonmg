@@ -11,15 +11,14 @@
   "home": {
     "heading": { "pt": "O que fazemos", "en": "What we do" },
     "cards": [
-      { "route": "comunidade", "title": { "pt": "Comunidade", "en": "Community" }, "text": { "pt": "Conversamos na lista de emails e no Telegram, e promovemos almoços, coding dojos e palestras.", "en": "We connect through the mailing list and Telegram, and run lunches, coding dojos and talks." }, "cta": { "pt": "Saiba mais", "en": "Learn more" } },
+      { "route": "comunidade", "title": { "pt": "Comunidade", "en": "Community" }, "text": { "pt": "Conversamos no Telegram e nas redes sociais, e promovemos almoços, coding dojos e palestras.", "en": "We connect through Telegram and social media, and run lunches, coding dojos and talks." }, "cta": { "pt": "Saiba mais", "en": "Learn more" } },
       { "route": "membros", "title": { "pt": "Membros", "en": "Members" }, "text": { "pt": "Colaboradores mantêm a comunicação ativa e ajudam a organizar e divulgar os encontros.", "en": "Contributors keep communication active and help organise and share our events." }, "cta": { "pt": "Conheça", "en": "Meet them" } },
       { "route": "projetos", "title": { "pt": "Projetos", "en": "Projects" }, "text": { "pt": "Iniciativas colaborativas para levar conhecimento e Python a mais pessoas.", "en": "Collaborative initiatives that bring Python and knowledge to more people." }, "cta": { "pt": "Ver projetos", "en": "View projects" } }
     ]
   },
   "community": [
-    { "title": { "pt": "Mídias sociais", "en": "Social media" }, "text": { "pt": "Acompanhe encontros, novidades e publicações da comunidade.", "en": "Follow meetups, news and community posts." }, "links": [{ "text": "Telegram", "href": "https://telegram.me/pythonmg" }, { "text": "Twitter", "href": "https://twitter.com/PythonMG" }, { "text": "Facebook", "href": "https://facebook.com/uaipython" }] },
-    { "title": { "pt": "Meetup", "en": "Meetup" }, "text": { "pt": "Nos encontramos regularmente para trocar conhecimento e experiências.", "en": "We meet regularly to share knowledge and experience." }, "links": [{ "text": "Meetup", "href": "http://www.meetup.com/Belo-Horizonte-Python-User-Group/" }] },
-    { "title": { "pt": "Lista de emails", "en": "Mailing list" }, "text": { "pt": "A lista oficial no Google Groups continua aberta para toda a comunidade.", "en": "The official Google Groups list is open to the entire community." }, "links": [{ "text": "Google Groups", "href": "https://groups.google.com/forum/#!forum/python-mg" }] }
+    { "title": { "pt": "Mídias sociais", "en": "Social media" }, "text": { "pt": "Acompanhe encontros, novidades e publicações da comunidade.", "en": "Follow meetups, news and community posts." }, "links": [{ "text": "Instagram", "href": "https://www.instagram.com/python.mg" }, { "text": "YouTube", "href": "https://www.youtube.com/c/PythonMinasGerais" }, { "text": "Telegram", "href": "https://telegram.me/pythonmg" }, { "text": "Twitter", "href": "https://twitter.com/PythonMG" }, { "text": "Facebook", "href": "https://facebook.com/uaipython" }] },
+    { "title": { "pt": "Meetup", "en": "Meetup" }, "text": { "pt": "Nos encontramos regularmente para trocar conhecimento e experiências.", "en": "We meet regularly to share knowledge and experience." }, "links": [{ "text": "Meetup", "href": "https://www.meetup.com/pythonmg/events" }] }
   ],
   "projects": [
     { "title": "Traduções do Django docs", "text": { "pt": "Tradução colaborativa da documentação oficial do Django para o português.", "en": "Collaborative translation of the official Django documentation into Portuguese." } },
@@ -35,8 +34,10 @@
   },
   "social": [
     { "text": "GitHub", "href": "https://github.com/pythonmg" },
-    { "text": "Telegram", "href": "https://telegram.me/pythonmg" },
-    { "text": "Mailing list", "href": "https://groups.google.com/forum/#!forum/python-mg" }
+    { "text": "Meetup", "href": "https://www.meetup.com/pythonmg/events" },
+    { "text": "Instagram", "href": "https://www.instagram.com/python.mg" },
+    { "text": "YouTube", "href": "https://www.youtube.com/c/PythonMinasGerais" },
+    { "text": "Telegram", "href": "https://telegram.me/pythonmg" }
   ],
   "footer": { "credit": { "pt": "Feito com Python, JSON e HTML.", "en": "Made with Python, JSON and HTML." }, "repo": "https://github.com/pythonmg/pythonmg.github.io" }
 }
