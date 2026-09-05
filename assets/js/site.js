@@ -10,14 +10,14 @@
       about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos',
       community: 'Comunidade', members: 'Membros', events: 'Eventos', projects: 'Projetos',
       conduct: 'Código de conduta', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
-      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.',
+      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.', meetupAgenda: 'Ver agenda no Meetup ↗',
       noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum membro cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
     },
     en: {
       about: 'About', nextMeetups: 'Next meetups', seeEvents: 'See events',
       community: 'Community', members: 'Members', events: 'Events', projects: 'Projects',
       conduct: 'Code of conduct', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
-      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.',
+      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.', meetupAgenda: 'View the Meetup calendar ↗',
       noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
     }
   };
