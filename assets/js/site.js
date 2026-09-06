@@ -133,7 +133,8 @@
     [
       ['comunidade', text('community')], ['conheca-tambem', text('partners')], ['membros', text('members')],
       ['eventos', text('events')], ['projetos', text('projects')], ['blog', text('blog')], ['conduta', text('conduct')]
-    ].forEach(([id, label]) => nav.append(element('a', { href: `#${id}`, text: label, 'data-section': id })));
+    ].filter(([id]) => id !== 'blog' || state.posts.length)
+      .forEach(([id, label]) => nav.append(element('a', { href: `#${id}`, text: label, 'data-section': id })));
   }
 
   function renderHome(upcoming) {
@@ -268,12 +269,11 @@
   }
 
   function renderPosts() {
+    const section = byId('blog');
     const container = byId('post-list');
     clear(container);
+    section.hidden = !state.posts.length;
     if (!state.posts.length) {
-      const panel = element('div', { class: 'empty-panel' });
-      panel.append(element('p', { text: text('noPosts') }), element('code', { text: 'data/posts.json' }));
-      container.append(panel);
       return;
     }
     state.posts.forEach((post) => {
@@ -317,7 +317,7 @@
       if (!visible) return;
       document.querySelectorAll('.main-nav a').forEach((link) => link.classList.toggle('active', link.dataset.section === visible.target.id));
     }, { rootMargin: '-82px 0px -60% 0px' });
-    SECTIONS.forEach((id) => observer.observe(byId(id)));
+    SECTIONS.map(byId).filter((section) => !section.hidden).forEach((section) => observer.observe(section));
   }
 
   async function load() {
