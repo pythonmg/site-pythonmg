@@ -27,10 +27,6 @@
     { "title": { "pt": "Associação Python Brasil", "en": "Python Brasil Association" }, "text": { "pt": "A APyB apoia e representa a comunidade Python no Brasil.", "en": "APyB supports and represents the Python community in Brazil." }, "linkText": { "pt": "Conheça a APyB", "en": "Meet APyB" }, "href": "https://apyb.python.org.br/" },
     { "title": { "pt": "Outras comunidades locais", "en": "Other local communities" }, "text": { "pt": "Encontre grupos Python em outras cidades e regiões do país.", "en": "Find Python groups in other cities and regions across Brazil." }, "linkText": { "pt": "Ver comunidades locais", "en": "View local communities" }, "href": "https://python.org.br/comunidades-locais/" }
   ],
-  "projects": [
-    { "title": "Traduções do Django docs", "text": { "pt": "Tradução colaborativa da documentação oficial do Django para o português.", "en": "Collaborative translation of the official Django documentation into Portuguese." } },
-    { "title": "Python on Campus", "text": { "pt": "Palestras e oficinas que levam Python para universidades de Minas Gerais.", "en": "Talks and workshops that bring Python to universities in Minas Gerais." } }
-  ],
   "conduct": {
     "title": { "pt": "Código de conduta", "en": "Code of conduct" },
     "items": [

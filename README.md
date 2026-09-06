@@ -20,13 +20,14 @@ editar HTML, CSS ou JavaScript para alterar as listas:
 
 - `data/members.json` — pessoas colaboradoras;
 - `data/posts.json` — posts do blog (opcional);
-- `data/site.json` — textos institucionais, links, projetos e código
-  de conduta.
+- `data/projects.json` — projetos da comunidade (opcional);
+- `data/site.json` — textos institucionais, links e código de conduta.
 
 Depois de mudar um JSON, valide a sintaxe:
 
 ```sh
 python3 -m json.tool data/members.json >/dev/null
+python3 -m json.tool data/projects.json >/dev/null
 ```
 
 ### Membro
@@ -53,6 +54,26 @@ fallback de avatar. Também é possível informar `"avatar"` com uma URL de imag
 que sempre tem prioridade. Os campos de rede social aceitam um usuário (com ou
 sem `@`) ou a URL completa do perfil. Para `mastodon`, use a URL completa ou o
 formato `@usuario@servidor`.
+
+### Projeto
+
+`data/projects.json` começa como uma lista vazia. Adicione um objeto para cada
+projeto; os campos `name` e `description` são obrigatórios. Ambos podem ser um
+texto simples ou um objeto com traduções `pt` e `en`. `url` é opcional e torna
+o card clicável; `image` é opcional e aceita uma URL HTTPS ou um caminho em
+`assets/` para exibir uma imagem de capa.
+
+```json
+{
+  "name": { "pt": "Nome do projeto", "en": "Project name" },
+  "description": { "pt": "Descrição do projeto.", "en": "Project description." },
+  "url": "https://exemplo.org/projeto",
+  "image": "assets/images/projetos/capa.png"
+}
+```
+
+Sem projetos na lista, a seção Projetos e seus links de navegação não são
+exibidos.
 
 ## Eventos e GitHub Actions
 

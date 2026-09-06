@@ -78,6 +78,7 @@
     return link;
   };
   const safeHref = (href) => /^(https?:|mailto:|#)/i.test(href || '') ? href : '#';
+  const safeImageSrc = (src) => /^(https?:|assets\/)/i.test(src || '') ? src : '';
   const profileUrl = (network, value) => {
     const raw = String(value || '').trim();
     if (!raw) return '';
@@ -137,7 +138,9 @@
     [
       ['comunidade', text('community')], ['conheca-tambem', text('partners')], ['membros', text('members')],
       ['eventos', text('events')], ['projetos', text('projects')], ['blog', text('blog')], ['conduta', text('conduct')]
-    ].filter(([id]) => (id !== 'blog' || state.posts.length) && (id !== 'membros' || state.members.length))
+    ].filter(([id]) => (id !== 'blog' || state.posts.length)
+      && (id !== 'membros' || state.members.length)
+      && (id !== 'projetos' || state.projects.length))
       .forEach(([id, label]) => nav.append(element('a', { href: `#${id}`, text: label, 'data-section': id })));
   }
 
@@ -158,7 +161,8 @@
 
     const cards = byId('home-cards');
     clear(cards);
-    (site.home.cards || []).filter((card) => card.route !== 'membros' || state.members.length).forEach((card, index) => {
+    (site.home.cards || []).filter((card) => (card.route !== 'membros' || state.members.length)
+      && (card.route !== 'projetos' || state.projects.length)).forEach((card, index) => {
       const cardLink = element('a', { class: 'card', href: `#${card.route}` });
       cardLink.append(
         element('span', { class: 'card-index', text: String(index + 1).padStart(2, '0') }),
@@ -263,12 +267,22 @@
     });
   }
 
-  function renderProjectsAndConduct() {
+  function renderProjects() {
+    const section = byId('projetos');
     const projects = byId('project-cards');
     clear(projects);
-    (state.site.projects || []).forEach((project) => {
-      projects.append(element('article', { class: 'card' }, [element('h3', { text: project.title }), element('p', { text: pick(project.text) })]));
+    section.hidden = !state.projects.length;
+    if (!state.projects.length) return;
+    state.projects.forEach((project) => {
+      const card = project.url ? external(project.url, '', 'card') : element('article', { class: 'card' });
+      const imageSrc = safeImageSrc(project.image);
+      if (imageSrc) card.append(element('img', { class: 'project-image', src: imageSrc, alt: '' }));
+      card.append(element('h3', { text: pick(project.name) }), element('p', { text: pick(project.description) }));
+      projects.append(card);
     });
+  }
+
+  function renderConduct() {
     const conduct = byId('conduct-list');
     clear(conduct);
     (state.site.conduct.items || []).forEach((item) => conduct.append(element('li', { text: pick(item) })));
@@ -312,7 +326,7 @@
     const upcoming = events.filter(isUpcoming).sort((a, b) => a.date - b.date);
     const past = events.filter((event) => !isUpcoming(event)).sort((a, b) => b.date - a.date);
     renderNavigation(); renderHome(upcoming); renderCommunity(); renderPartners(); renderMembers();
-    renderEvents(upcoming, past); renderProjectsAndConduct(); renderPosts(); renderFooter(); observeSections();
+    renderEvents(upcoming, past); renderProjects(); renderConduct(); renderPosts(); renderFooter(); observeSections();
   }
 
   let observer;
@@ -327,16 +341,17 @@
   }
 
   async function load() {
-    const files = ['site.json', 'members.json', 'events.json', 'posts.json'];
+    const files = ['site.json', 'members.json', 'events.json', 'projects.json', 'posts.json'];
     try {
       const results = await Promise.all(files.map(async (file) => {
         const response = await fetch(`data/${file}`);
         if (!response.ok) throw new Error(`${file}: ${response.status}`);
         return response.json();
       }));
-      [state.site, state.members, state.events, state.posts] = results;
+      [state.site, state.members, state.events, state.projects, state.posts] = results;
       state.members = Array.isArray(state.members) ? state.members : [];
       state.events = Array.isArray(state.events) ? state.events : [];
+      state.projects = Array.isArray(state.projects) ? state.projects : [];
       state.posts = Array.isArray(state.posts) ? state.posts : [];
       render();
     } catch (error) {
