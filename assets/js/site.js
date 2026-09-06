@@ -5,6 +5,10 @@
     pt: ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'],
     en: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
   };
+  const WEEKDAYS = {
+    pt: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+    en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  };
   const COPY = {
     pt: {
       about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos no Meetup ↗', seeMoreEvents: 'Ver mais no Meetup ↗',
@@ -117,7 +121,7 @@
       day: String(date.getDate()).padStart(2, '0'),
       month: MONTHS[lang][date.getMonth()],
       shortDate: `${String(date.getDate()).padStart(2, '0')} ${MONTHS[lang][date.getMonth()]}`,
-      displayDate: `${String(date.getDate()).padStart(2, '0')} ${MONTHS[lang][date.getMonth()]} ${date.getFullYear()}${event.time ? ` · ${event.time}` : ''}`,
+      displayDate: `${WEEKDAYS[lang][date.getDay()]}, ${String(date.getDate()).padStart(2, '0')} ${MONTHS[lang][date.getMonth()]} ${date.getFullYear()}${event.time ? ` · ${event.time}` : ''}`,
       meta: `${event.time ? `${event.time} · ` : ''}${pick(event.place)}`
     };
   };
