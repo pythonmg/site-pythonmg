@@ -136,7 +136,6 @@
     byId('sobre-title').textContent = pick(site.home.heading);
     byId('about-text').textContent = pick(site.about);
     byId('community-title').textContent = text('community');
-    byId('community-intro').textContent = pick(site.about);
     byId('members-title').textContent = text('members');
     byId('events-title').textContent = text('events');
     byId('projects-title').textContent = text('projects');
