@@ -688,6 +688,13 @@ a.card {
   font-size: 14px;
 }
 
+.footer-main .trademark-notice {
+  margin-top: 10px;
+  color: #897d81;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;

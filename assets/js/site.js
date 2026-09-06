@@ -156,6 +156,7 @@
     byId('projects-title').textContent = text('projects');
     byId('conduct-title').textContent = pick(site.conduct.title);
     byId('footer-about').textContent = pick(site.about);
+    byId('footer-trademarks').textContent = pick(site.footer.trademarks);
     byId('footer-credit').textContent = pick(site.footer.credit);
     byId('repository-link').href = safeHref(site.footer.repo);
 

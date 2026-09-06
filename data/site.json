@@ -42,5 +42,5 @@
     { "text": "YouTube", "href": "https://www.youtube.com/c/PythonMinasGerais" },
     { "text": "Telegram", "href": "https://telegram.me/pythonmg" }
   ],
-  "footer": { "credit": { "pt": "Feito com Python, JSON e HTML.", "en": "Made with Python, JSON and HTML." }, "repo": "https://github.com/pythonmg/site-pythonmg" }
+  "footer": { "credit": { "pt": "Feito com Python, JSON e HTML.", "en": "Made with Python, JSON and HTML." }, "trademarks": { "pt": "“Python” e os logotipos Python são marcas da Python Software Foundation (PSF) e são utilizados com permissão.", "en": "“Python” and the Python logos are trademarks of the Python Software Foundation (PSF) and are used with permission." }, "repo": "https://github.com/pythonmg/site-pythonmg" }
 }
