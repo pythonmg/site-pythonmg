@@ -8,20 +8,20 @@
   const COPY = {
     pt: {
       about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos no Meetup ↗', seeMoreEvents: 'Ver mais no Meetup ↗',
-      community: 'Comunidade', members: 'Membros', events: 'Eventos', projects: 'Projetos',
+      community: 'Comunidade', partners: 'Conheça também', members: 'Membros', events: 'Eventos', projects: 'Projetos',
       conduct: 'Código de conduta', fullConduct: 'Ver Código de Conduta completo ↗', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
       eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.',
       noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum membro cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
     },
     en: {
       about: 'About', nextMeetups: 'Next meetups', seeEvents: 'View events on Meetup ↗', seeMoreEvents: 'View more on Meetup ↗',
-      community: 'Community', members: 'Members', events: 'Events', projects: 'Projects',
+      community: 'Community', partners: 'Discover also', members: 'Members', events: 'Events', projects: 'Projects',
       conduct: 'Code of conduct', fullConduct: 'View the full Code of Conduct ↗', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
       eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.',
       noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
     }
   };
-  const SECTIONS = ['comunidade', 'membros', 'eventos', 'projetos', 'blog', 'conduta'];
+  const SECTIONS = ['comunidade', 'conheca-tambem', 'membros', 'eventos', 'projetos', 'blog', 'conduta'];
   let lang = 'pt';
   let state = {};
 
@@ -124,7 +124,7 @@
     const nav = byId('navegacao');
     clear(nav);
     [
-      ['comunidade', text('community')], ['membros', text('members')],
+      ['comunidade', text('community')], ['conheca-tambem', text('partners')], ['membros', text('members')],
       ['eventos', text('events')], ['projetos', text('projects')], ['blog', text('blog')], ['conduta', text('conduct')]
     ].forEach(([id, label]) => nav.append(element('a', { href: `#${id}`, text: label, 'data-section': id })));
   }
@@ -176,6 +176,20 @@
       const links = element('div', { class: 'card-links' });
       (block.links || []).forEach((link) => links.append(external(link.href, link.text, 'pill')));
       card.append(element('h3', { text: pick(block.title) }), element('p', { text: pick(block.text) }), links);
+      container.append(card);
+    });
+  }
+
+  function renderPartners() {
+    byId('partners-title').textContent = text('partners');
+    byId('partners-intro').textContent = pick(state.site.partnersIntro);
+    const container = byId('partner-cards');
+    clear(container);
+    (state.site.partners || []).forEach((partner) => {
+      const card = element('article', { class: 'card' });
+      const links = element('div', { class: 'card-links' });
+      links.append(external(partner.href, pick(partner.linkText), 'pill'));
+      card.append(element('h3', { text: pick(partner.title) }), element('p', { text: pick(partner.text) }), links);
       container.append(card);
     });
   }
@@ -285,7 +299,7 @@
     const events = state.events.map(eventView);
     const upcoming = events.filter(isUpcoming).sort((a, b) => a.date - b.date);
     const past = events.filter((event) => !isUpcoming(event)).sort((a, b) => b.date - a.date);
-    renderNavigation(); renderHome(upcoming); renderCommunity(); renderMembers();
+    renderNavigation(); renderHome(upcoming); renderCommunity(); renderPartners(); renderMembers();
     renderEvents(upcoming, past); renderProjectsAndConduct(); renderPosts(); renderFooter(); observeSections();
   }
 
