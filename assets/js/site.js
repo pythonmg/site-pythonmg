@@ -106,15 +106,18 @@
     return parseDate(event.date) >= today;
   };
   const eventView = (event) => {
-    const date = parseDate(event.date);
+    const isoDate = event.date;
+    const date = parseDate(isoDate);
     return {
       ...event,
       date,
+      isoDate,
       title: pick(event.title),
       place: pick(event.place),
       day: String(date.getDate()).padStart(2, '0'),
       month: MONTHS[lang][date.getMonth()],
       shortDate: `${String(date.getDate()).padStart(2, '0')} ${MONTHS[lang][date.getMonth()]}`,
+      displayDate: `${String(date.getDate()).padStart(2, '0')} ${MONTHS[lang][date.getMonth()]} ${date.getFullYear()}${event.time ? ` · ${event.time}` : ''}`,
       meta: `${event.time ? `${event.time} · ` : ''}${pick(event.place)}`
     };
   };
@@ -244,7 +247,7 @@
     });
     past.slice(0, 3).forEach((event) => {
       const item = external(event.href || '#eventos', '', 'past-event');
-      item.append(element('time', { datetime: event.date, text: event.date }), element('span', { text: event.title }), element('small', { text: event.place }));
+      item.append(element('time', { datetime: event.isoDate, text: event.displayDate }), element('span', { text: event.title }), element('small', { text: event.place }));
       pastContainer.append(item);
     });
   }
