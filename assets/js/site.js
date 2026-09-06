@@ -25,7 +25,7 @@
       noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
     }
   };
-  const SECTIONS = ['comunidade', 'membros', 'eventos', 'projetos', 'blog', 'conduta', 'conheca-tambem'];
+  const SECTIONS = ['comunidade', 'eventos', 'conduta', 'membros', 'projetos', 'blog', 'conheca-tambem'];
   let lang = 'pt';
   let state = {};
 
@@ -136,8 +136,8 @@
     const nav = byId('navegacao');
     clear(nav);
     [
-      ['comunidade', text('community')], ['membros', text('members')], ['eventos', text('events')],
-      ['projetos', text('projects')], ['blog', text('blog')], ['conduta', text('conduct')], ['conheca-tambem', text('partners')]
+      ['comunidade', text('community')], ['eventos', text('events')], ['conduta', text('conduct')],
+      ['membros', text('members')], ['projetos', text('projects')], ['blog', text('blog')], ['conheca-tambem', text('partners')]
     ].filter(([id]) => (id !== 'blog' || state.posts.length)
       && (id !== 'membros' || state.members.length)
       && (id !== 'projetos' || state.projects.length))
