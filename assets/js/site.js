@@ -61,6 +61,10 @@
     if (value.includes('mastodon')) return 'bi-mastodon';
     return 'bi-box-arrow-up-right';
   };
+  const isMeetupLink = (href) => String(href || '').toLowerCase().includes('meetup.com');
+  const linkIcon = (href) => isMeetupLink(href)
+    ? element('img', { class: 'external-link-icon meetup-icon', src: 'assets/images/icons/meetup.png', alt: '' })
+    : element('i', { class: `bi ${externalIcon(href)} external-link-icon`, 'aria-hidden': 'true' });
   const external = (href, label, className) => {
     const link = element('a', { href: safeHref(href), class: className });
     if (/^https?:/i.test(link.href)) {
@@ -68,7 +72,7 @@
       link.rel = 'noreferrer';
     }
     if (label) link.append(
-      element('i', { class: `bi ${externalIcon(href)} external-link-icon`, 'aria-hidden': 'true' }),
+      linkIcon(href),
       document.createTextNode(label)
     );
     return link;
