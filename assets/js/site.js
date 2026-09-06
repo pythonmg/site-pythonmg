@@ -133,7 +133,7 @@
     [
       ['comunidade', text('community')], ['conheca-tambem', text('partners')], ['membros', text('members')],
       ['eventos', text('events')], ['projetos', text('projects')], ['blog', text('blog')], ['conduta', text('conduct')]
-    ].filter(([id]) => id !== 'blog' || state.posts.length)
+    ].filter(([id]) => (id !== 'blog' || state.posts.length) && (id !== 'membros' || state.members.length))
       .forEach(([id, label]) => nav.append(element('a', { href: `#${id}`, text: label, 'data-section': id })));
   }
 
@@ -154,7 +154,7 @@
 
     const cards = byId('home-cards');
     clear(cards);
-    (site.home.cards || []).forEach((card, index) => {
+    (site.home.cards || []).filter((card) => card.route !== 'membros' || state.members.length).forEach((card, index) => {
       const cardLink = element('a', { class: 'card', href: `#${card.route}` });
       cardLink.append(
         element('span', { class: 'card-index', text: String(index + 1).padStart(2, '0') }),
@@ -202,9 +202,11 @@
   }
 
   function renderMembers() {
+    const section = byId('membros');
     const container = byId('members-list');
     clear(container);
-    if (!state.members.length) container.append(empty(text('noMembers')));
+    section.hidden = !state.members.length;
+    if (!state.members.length) return;
     [...state.members]
       .sort((left, right) => (left.name || '').localeCompare(right.name || '', 'pt-BR', { sensitivity: 'base' }))
       .forEach((member) => {
