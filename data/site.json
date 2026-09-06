@@ -1,7 +1,7 @@
 {
   "brand": { "name": "Python-MG" },
   "hero": {
-    "title": { "pt": "Seja bem-vindo ao Python-MG!", "en": "Welcome to Python-MG!" },
+    "title": { "pt": "Seja bem-vindo à Python-MG!", "en": "Welcome to Python-MG!" },
     "text": { "pt": "Grupo de usuários da linguagem Python em Minas Gerais.", "en": "Python user group in Minas Gerais, Brazil." }
   },
   "about": {
@@ -22,8 +22,8 @@
   ],
   "partnersIntro": { "pt": "Eventos, instituições e comunidades que fortalecem o ecossistema Python.", "en": "Events, organisations, and communities that strengthen the Python ecosystem." },
   "partners": [
-    { "title": { "pt": "Evento regional", "en": "Regional event" }, "text": { "pt": "Python Sudeste reúne comunidades da região Sudeste.", "en": "Python Sudeste brings together communities from Southeast Brazil." }, "linkText": { "pt": "Python Sudeste", "en": "Python Sudeste" }, "href": "https://sudeste.python.org.br" },
-    { "title": { "pt": "Evento nacional", "en": "National event" }, "text": { "pt": "Python Brasil é o encontro nacional da comunidade Python.", "en": "Python Brasil is the national gathering of the Python community." }, "linkText": { "pt": "Python Brasil", "en": "Python Brasil" }, "href": "https://pythonbrasil.org.br/" },
+    { "title": { "pt": "Python Sudeste", "en": "Python Sudeste" }, "text": { "pt": "Python Sudeste é um evento anual que reúne comunidades da região Sudeste.", "en": "Python Sudeste is an annual event that brings together communities from Southeast Brazil." }, "linkText": { "pt": "Python Sudeste", "en": "Python Sudeste" }, "href": "https://sudeste.python.org.br" },
+    { "title": { "pt": "Python Brasil", "en": "Python Brasil" }, "text": { "pt": "Python Brasil é o encontro nacional da comunidade Python.", "en": "Python Brasil is the national gathering of the Python community." }, "linkText": { "pt": "Python Brasil", "en": "Python Brasil" }, "href": "https://pythonbrasil.org.br/" },
     { "title": { "pt": "Associação Python Brasil", "en": "Python Brasil Association" }, "text": { "pt": "A APyB apoia e representa a comunidade Python no Brasil.", "en": "APyB supports and represents the Python community in Brazil." }, "linkText": { "pt": "Conheça a APyB", "en": "Meet APyB" }, "href": "https://apyb.python.org.br/" },
     { "title": { "pt": "Outras comunidades locais", "en": "Other local communities" }, "text": { "pt": "Encontre grupos Python em outras cidades e regiões do país.", "en": "Find Python groups in other cities and regions across Brazil." }, "linkText": { "pt": "Ver comunidades locais", "en": "View local communities" }, "href": "https://python.org.br/comunidades-locais/" }
   ],
