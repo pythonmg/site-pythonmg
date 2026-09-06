@@ -161,16 +161,18 @@
 
     const cards = byId('home-cards');
     clear(cards);
-    (site.home.cards || []).filter((card) => (card.route !== 'membros' || state.members.length)
-      && (card.route !== 'projetos' || state.projects.length)).forEach((card, index) => {
-      const cardLink = element('a', { class: 'card', href: `#${card.route}` });
-      cardLink.append(
+    (site.home.cards || []).filter((card) => card.route !== 'membros' || state.members.length).forEach((card, index) => {
+      const hasDestination = card.route !== 'projetos' || state.projects.length;
+      const cardElement = hasDestination
+        ? element('a', { class: 'card', href: `#${card.route}` })
+        : element('article', { class: 'card' });
+      cardElement.append(
         element('span', { class: 'card-index', text: String(index + 1).padStart(2, '0') }),
         element('h3', { text: pick(card.title) }),
         element('p', { text: pick(card.text) }),
-        element('span', { class: 'card-cta', text: `${pick(card.cta)} ↓` })
+        element('span', { class: 'card-cta', text: hasDestination ? `${pick(card.cta)} ↓` : pick(card.cta) })
       );
-      cards.append(cardLink);
+      cards.append(cardElement);
     });
 
     const next = byId('next-events');
