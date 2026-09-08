@@ -12,7 +12,7 @@
     "heading": { "pt": "O que fazemos", "en": "What we do" },
     "cards": [
       { "route": "comunidade", "title": { "pt": "Comunidade", "en": "Community" }, "text": { "pt": "Conversamos no Telegram e nas redes sociais, e promovemos encontros técnicos (palestras e workshops) e não tecnicos (PyBar).", "en": "We connect through Telegram and social media, and promote technical (talks and workshops) and non-technical (PyBar) gatherings." }, "cta": { "pt": "Saiba mais", "en": "Learn more" } },
-      { "route": "membros", "title": { "pt": "Membros", "en": "Members" }, "text": { "pt": "Colaboradores mantêm a comunicação ativa e ajudam a organizar e divulgar os encontros.", "en": "Contributors keep communication active and help organise and share our events." }, "cta": { "pt": "Conheça", "en": "Meet them" } },
+      { "route": "membros", "title": { "pt": "Voluntários", "en": "Volunteers" }, "text": { "pt": "Pessoas que contribuem ou já contribuíram com a comunidade.", "en": "People who contribute or have contributed to the community." }, "cta": { "pt": "Conheça", "en": "Meet them" } },
       { "route": "projetos", "title": { "pt": "Projetos", "en": "Projects" }, "text": { "pt": "Iniciativas colaborativas para levar conhecimento e Python a mais pessoas.", "en": "Collaborative initiatives that bring Python and knowledge to more people." }, "cta": { "pt": "Ver projetos", "en": "View projects" } }
     ]
   },

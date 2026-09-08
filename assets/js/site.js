@@ -12,17 +12,17 @@
   const COPY = {
     pt: {
       about: 'Sobre', nextMeetups: 'Próximos encontros', seeEvents: 'Ver eventos no Meetup ↗', seeMoreEvents: 'Ver mais no Meetup ↗',
-      community: 'Comunidade', partners: 'Conheça também', members: 'Membros', events: 'Eventos', projects: 'Projetos',
+      community: 'Comunidade', partners: 'Conheça também', members: 'Voluntários', events: 'Eventos', projects: 'Projetos',
       conduct: 'Código de conduta', fullConduct: 'Ver Código de Conduta completo ↗', blog: 'Blog', upcoming: 'Próximos', past: 'Eventos anteriores',
-      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.',
-      noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum membro cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
+      eventsIntro: 'Nos encontramos para trocar conhecimento. A agenda é mantida em data/events.json.', volunteersIntro: 'Pessoas que contribuem ou já contribuíram com a comunidade.',
+      noEvents: 'Nenhum evento cadastrado no momento.', noMembers: 'Nenhum voluntário cadastrado ainda.', noPosts: 'Nenhum post publicado ainda.'
     },
     en: {
       about: 'About', nextMeetups: 'Next meetups', seeEvents: 'View events on Meetup ↗', seeMoreEvents: 'View more on Meetup ↗',
-      community: 'Community', partners: 'Discover also', members: 'Members', events: 'Events', projects: 'Projects',
+      community: 'Community', partners: 'Discover also', members: 'Volunteers', events: 'Events', projects: 'Projects',
       conduct: 'Code of conduct', fullConduct: 'View the full Code of Conduct ↗', blog: 'Blog', upcoming: 'Upcoming', past: 'Past events',
-      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.',
-      noEvents: 'No events have been added yet.', noMembers: 'No members have been added yet.', noPosts: 'No posts have been published yet.'
+      eventsIntro: 'We get together to share knowledge. The schedule lives in data/events.json.', volunteersIntro: 'People who contribute or have contributed to the community.',
+      noEvents: 'No events have been added yet.', noMembers: 'No volunteers have been added yet.', noPosts: 'No posts have been published yet.'
     }
   };
   const SECTIONS = ['comunidade', 'eventos', 'conduta', 'membros', 'projetos', 'blog', 'conheca-tambem'];
