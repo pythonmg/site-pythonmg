@@ -1,5 +1,6 @@
-// Use comentários para registrar contexto sobre a lista, mas mantenha cada voluntário
-// como um objeto JSON válido.
+// Campos obrigatórios: name
+// Campos opcionais: avatar, github, twitter, linkedin, instagram, telegram, bluesky, threads, mastodon, email, site
+// A imagem é carregada do campo 'avatar' (URL) ou do perfil 'github', ou do perfil do 'linkedin'
 [
   {
     "name": "Alessandra Cioletti",
@@ -21,8 +22,12 @@
     "name": "Cássio Botaro",
     "github": "cassiobotaro",
     "twitter": "@cassiobotaro",
+    "linkedin": "https://www.linkedin.com/in/cassiobotaro/",
     // "email": "cassiobotaro@gmail.com",
-    "site": { "nome": "Import None", "href": "https://cassiobotaro.github.io" }
+    "site": {
+      "nome": "Import None",
+      "href": "https://cassiobotaro.github.io"
+    }
   },
   {
     "name": "Daniel Bicalho",
