@@ -1,3 +1,5 @@
+// Use comentários para registrar contexto sobre a lista, mas mantenha cada voluntário
+// como um objeto JSON válido.
 [
   {
     "name": "Alessandra Cioletti",
@@ -8,7 +10,7 @@
     "linkedin": "https://www.linkedin.com/in/allanadcardoso/"
   },
   {
-    "name": "Anna S.",
+    "name": "Anna Luiza",
     "linkedin": "https://www.linkedin.com/in/anna-s-b0680b2b3/"
   },
   {
@@ -19,11 +21,11 @@
     "name": "Cássio Botaro",
     "github": "cassiobotaro",
     "twitter": "@cassiobotaro",
-    "email": "cassiobotaro@gmail.com",
+    // "email": "cassiobotaro@gmail.com",
     "site": { "nome": "Import None", "href": "https://cassiobotaro.github.io" }
   },
   {
-    "name": "Daniel Canesso Bicalho",
+    "name": "Daniel Bicalho",
     "linkedin": "https://www.linkedin.com/in/daniel-canesso/"
   },
   {
@@ -31,15 +33,15 @@
     "linkedin": "https://www.linkedin.com/in/dmthomaz/"
   },
   {
-    "name": "Diego Ascanio Santos",
+    "name": "Diego Ascanio",
     "linkedin": "https://www.linkedin.com/in/diego-ascanio-santos-02b674210/"
   },
   {
-    "name": "Iago P. Ferreira",
+    "name": "Iago Ferreira",
     "linkedin": "https://www.linkedin.com/in/iago-p-ferreira/"
   },
   {
-    "name": "Jean",
+    "name": "Jean Oliveira",
     "linkedin": "https://www.linkedin.com/in/jean3/"
   },
   {

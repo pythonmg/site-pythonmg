@@ -18,15 +18,15 @@ arquivos estáticos, incluindo GitHub Pages.
 Os arquivos abaixo são copiados para o site sem transformação. Não é preciso
 editar HTML, CSS ou JavaScript para alterar as listas:
 
-- `data/members.json` — pessoas voluntárias, atuais e ex-voluntárias;
+- `data/members.jsonc` — pessoas voluntárias, atuais e ex-voluntárias. Aceita
+  comentários com `//`;
 - `data/posts.json` — posts do blog (opcional);
 - `data/projects.json` — projetos da comunidade (opcional);
 - `data/site.json` — textos institucionais, links e código de conduta.
 
-Depois de mudar um JSON, valide a sintaxe:
+Depois de mudar um arquivo JSON puro, valide a sintaxe:
 
 ```sh
-python3 -m json.tool data/members.json >/dev/null
 python3 -m json.tool data/projects.json >/dev/null
 ```
 

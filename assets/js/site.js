@@ -344,12 +344,12 @@
   }
 
   async function load() {
-    const files = ['site.json', 'members.json', 'events.json', 'projects.json', 'posts.json'];
+    const files = ['site.json', 'members.jsonc', 'events.json', 'projects.json', 'posts.json'];
     try {
       const results = await Promise.all(files.map(async (file) => {
         const response = await fetch(`data/${file}`);
         if (!response.ok) throw new Error(`${file}: ${response.status}`);
-        return response.json();
+        return parseJsonc(await response.text());
       }));
       [state.site, state.members, state.events, state.projects, state.posts] = results;
       state.members = Array.isArray(state.members) ? state.members : [];
@@ -362,6 +362,41 @@
       byId('hero-title').textContent = 'Python-MG';
       byId('hero-text').textContent = 'Não foi possível carregar os dados do site.';
     }
+  }
+
+  function parseJsonc(content) {
+    let output = '';
+    let inString = false;
+    let escaped = false;
+
+    for (let index = 0; index < content.length; index += 1) {
+      const character = content[index];
+      const nextCharacter = content[index + 1];
+
+      if (inString) {
+        output += character;
+        if (escaped) escaped = false;
+        else if (character === '\\') escaped = true;
+        else if (character === '"') inString = false;
+        continue;
+      }
+
+      if (character === '"') {
+        inString = true;
+        output += character;
+      } else if (character === '/' && nextCharacter === '/') {
+        while (index < content.length && content[index] !== '\n') index += 1;
+        output += '\n';
+      } else if (character === '/' && nextCharacter === '*') {
+        index += 2;
+        while (index < content.length && !(content[index] === '*' && content[index + 1] === '/')) index += 1;
+        index += 1;
+      } else {
+        output += character;
+      }
+    }
+
+    return JSON.parse(output);
   }
 
   byId('language-toggle').addEventListener('click', () => { lang = lang === 'pt' ? 'en' : 'pt'; render(); });
