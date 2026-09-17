@@ -18,7 +18,7 @@ arquivos estáticos, incluindo GitHub Pages.
 Os arquivos abaixo são copiados para o site sem transformação. Não é preciso
 editar HTML, CSS ou JavaScript para alterar as listas:
 
-- `data/members.jsonc` — pessoas voluntárias, atuais e ex-voluntárias. Aceita
+- `data/organizers.jsonc` — pessoas voluntárias, atuais e ex-voluntárias. Aceita
   comentários com `//`;
 - `data/posts.json` — posts do blog (opcional);
 - `data/projects.json` — projetos da comunidade (opcional);

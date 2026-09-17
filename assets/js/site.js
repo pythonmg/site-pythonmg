@@ -344,7 +344,7 @@
   }
 
   async function load() {
-    const files = ['site.json', 'members.jsonc', 'events.json', 'projects.json', 'posts.json'];
+    const files = ['site.json', 'organizers.jsonc', 'events.json', 'projects.json', 'posts.json'];
     try {
       const results = await Promise.all(files.map(async (file) => {
         const response = await fetch(`data/${file}`);
