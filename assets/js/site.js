@@ -108,18 +108,16 @@
       return '';
     }
   };
-  const parseDate = (iso) => new Date(`${iso}T00:00:00`);
-  const isUpcoming = (event) => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return parseDate(event.date) >= today;
-  };
+  const parseDate = (iso) => new Date(`${iso}T12:00:00`);
+  const parseEventStart = (iso, time = '00:00') => new Date(`${iso}T${time}:00-03:00`);
+  const isUpcoming = (event) => event.startsAt.getTime() >= Date.now();
   const eventView = (event) => {
     const isoDate = event.date;
     const date = parseDate(isoDate);
     return {
       ...event,
       date,
+      startsAt: parseEventStart(isoDate, event.time),
       isoDate,
       title: pick(event.title),
       place: pick(event.place),
@@ -326,8 +324,8 @@
   function render() {
     setTranslatedLabels();
     const events = state.events.map(eventView);
-    const upcoming = events.filter(isUpcoming).sort((a, b) => a.date - b.date);
-    const past = events.filter((event) => !isUpcoming(event)).sort((a, b) => b.date - a.date);
+    const upcoming = events.filter(isUpcoming).sort((a, b) => a.startsAt - b.startsAt);
+    const past = events.filter((event) => !isUpcoming(event)).sort((a, b) => b.startsAt - a.startsAt);
     renderNavigation(); renderHome(upcoming); renderCommunity(); renderPartners(); renderMembers();
     renderEvents(upcoming, past); renderProjects(); renderConduct(); renderPosts(); renderFooter(); observeSections();
   }
