@@ -148,5 +148,20 @@
     "href": "https://www.meetup.com/pythonmg/events/315969580/",
     "kind": "physical",
     "source": "meetup"
+  },
+  {
+    "title": {
+      "pt": "Meetup Python MG (Presencial)",
+      "en": "Meetup Python MG (Presencial)"
+    },
+    "date": "2026-09-29",
+    "time": "19:00",
+    "place": {
+      "pt": "DTI Digital, Belo Horizonte",
+      "en": "DTI Digital, Belo Horizonte"
+    },
+    "href": "https://www.meetup.com/pythonmg/events/316599273/",
+    "kind": "physical",
+    "source": "meetup"
   }
 ]
