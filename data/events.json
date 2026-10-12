@@ -1,36 +1,6 @@
 [
   {
     "title": {
-      "pt": "PyBHar - 07/03/2024",
-      "en": "PyBHar - 07/03/2024"
-    },
-    "date": "2024-03-07",
-    "time": "19:00",
-    "place": {
-      "pt": "O Segredo, Belo Horizonte",
-      "en": "O Segredo, Belo Horizonte"
-    },
-    "href": "https://www.meetup.com/pythonmg/events/299538407/",
-    "kind": "physical",
-    "source": "meetup"
-  },
-  {
-    "title": {
-      "pt": "Meetup Python MG - 27/03/2024",
-      "en": "Meetup Python MG - 27/03/2024"
-    },
-    "date": "2024-03-27",
-    "time": "19:00",
-    "place": {
-      "pt": "CEFET-MG - Campus Nova Gameleira, Belo Horizonte",
-      "en": "CEFET-MG - Campus Nova Gameleira, Belo Horizonte"
-    },
-    "href": "https://www.meetup.com/pythonmg/events/299753134/",
-    "kind": "physical",
-    "source": "meetup"
-  },
-  {
-    "title": {
       "pt": "PyBHar - 11/04/2024",
       "en": "PyBHar - 11/04/2024"
     },
